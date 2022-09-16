@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+h1, p{
+    text-align: center;
+}
+
+li:hover {
+    background-color: crimson;
+}
+
+li:active {
+    background-color: blue;
+}
+
+ul, ol{
+    list-style: none;
+}
