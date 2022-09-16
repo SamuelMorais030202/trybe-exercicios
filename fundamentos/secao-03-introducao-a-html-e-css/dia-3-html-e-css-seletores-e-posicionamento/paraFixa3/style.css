@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+ol li{
+    background-color: yellow;
+}
+
+ol li.par {
+    color: green;
+}
+
+ol li.impar{
+    text-transform: uppercase;
+}
+
+h1, h3 {
+    color: red;
+}
+
+h1 em{
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+li{
+    font-size: 20px;
+}
+
+li em {
+    font-weight: bold;
+}
+
+.podio{
+    color: blue;
+}
+
+.seg{
+    background-color: pink;
+}
+
+ul li a:hover {
+    font-weight: bold;
+}
+
+#Stack:hover{
+    color: brown;
+}
+
+#W3S:hover{
+    color: aqua;
+}
+
+#MDN:hover{
+    color: chartreuse;
+}
+
+#Dev:hover{
+    color: crimson;
+}
+
+#Trybe:hover{
+    color: green;
+}
