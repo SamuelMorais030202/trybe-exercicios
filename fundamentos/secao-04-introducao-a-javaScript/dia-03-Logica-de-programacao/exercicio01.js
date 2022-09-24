@@ -1,7 +1,10 @@
-let factorial = 1;
+// Calcule o fatorial de 10
+// Ex : 4! = 4 x 3 x 2 x 1 = 24
+
+let fatorial = 1;
 
 for(let index = 10; index > 0; index -= 1){
-    factorial *= index
-}
+    fatorial *= index;
+};
 
-console.log(factorial)
+console.log(fatorial)
