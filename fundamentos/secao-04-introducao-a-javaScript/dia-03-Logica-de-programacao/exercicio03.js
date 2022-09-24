@@ -9,7 +9,7 @@ for(let index = 0; index < array.length; index += 1){
     }
 }
 
-//console.log(maiorPalavra)
+console.log(maiorPalavra)
 
 menorPalavra = maiorPalavra
 
@@ -18,4 +18,4 @@ for(let index = 0; index < array.length; array += 1){
         menorPalavra = array[index]
     }
 }
-console.log(menorPalavra)
+console.log("*")
