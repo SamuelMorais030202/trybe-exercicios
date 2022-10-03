@@ -10,21 +10,22 @@ window.onload = function () {
   //  - Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 
   function adicionandoClass (event) {
-    let classe = document.querySelector('.tech');
-    classe.classList.remove('tech');
+    const itemClass = document.querySelector('.tech');
+    itemClass.classList.remove('tech');
     event.target.classList.add('tech');
+    input.value = '';
   }
 
   firstLi.addEventListener('click', adicionandoClass);
   secondLi.addEventListener('click', adicionandoClass);
   thirdLi.addEventListener('click', adicionandoClass);
-
+ 
   // - Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
   // com a classe 'tech';
   
-  input.addEventListener('input', function(event) {
-    const elemento = document.querySelector('.tech')
-    elemento.innerHTML = event.target.value
+  input.addEventListener('input', function (event) {
+    const textItem = document.querySelector('.tech');
+    textItem.innerText = event.target.value
   })
 
   // - Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
