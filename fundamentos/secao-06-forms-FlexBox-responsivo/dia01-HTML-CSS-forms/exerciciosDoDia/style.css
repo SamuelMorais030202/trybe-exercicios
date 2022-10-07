@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+body {
+    background-image: url('https://img.freepik.com/fotos-gratis/conceito-de-viagens-com-pontos-de-referencia_23-2149153256.jpg?w=2000');
+    background-size: cover;
+}
+
+header {
+    margin-top: 0px;
+    text-align: center;
+}
+
+main {
+    margin-top: 0px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+form {
+    display: inline-block;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.61);
+    border: 1px solid rgba(1, 1, 211, 0.767);
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px blue;
+    text-align: left;
+    padding: 20px 40px 30px 10px;
+    margin-top: 0px;
+}
+
+.label {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+input {
+    margin-top: 6px;
+}
+
+.input {
+    width: 200px;
+    height: 20px;
+}
+
+textarea {
+    resize: none;
+}
+
+.button {
+    background-color: rgba(2, 2, 211, 0.822);
+    padding: 6px;
+    border: 1px solid white;
+    border-radius: 8px;
+    margin-top: 5px;
+    box-shadow: 1px 1px 1px black;
+    display: inline-block;
+    position: relative;
+    left: 40%;
+}
+
