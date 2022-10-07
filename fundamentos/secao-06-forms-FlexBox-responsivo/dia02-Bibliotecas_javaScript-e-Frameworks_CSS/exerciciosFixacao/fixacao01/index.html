@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo a trabalhar com bootstrap</title>
+    <link rel="stylesheet" href="/fundamentos/secao-06-forms-FlexBox-responsivo/dia02-Bibliotecas_javaScript-e-Frameworks_CSS/exerciciosFixacao/fixacao01/bootstrap-5.2.2-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Formulário</h1>
+
+    <form action="" method="get" class="form-control">
+        <label for="name">
+            Nome:
+            <input class="input-group" type="text" name="txt-name" id="name">
+        </label>
+        
+        <br>
+
+        <label for="e-mail">
+            E-mail
+            <input class="input-group" type="email" name="txt-email" id="e-mail">
+        </label>
+
+        <br>
+
+        <label for="estado">
+            <select name="options-estado" id="estado">
+                <option value="sp">São Paulo</option>
+                <option value="mg">Minas Gerais</option>
+                <option value="rj">Rio de Janeiro</option>
+            </select>
+        </label>
+
+        <br>
+
+        <label for="data-nascimento">
+            Data de nascimento:
+            <input type="date" name="data" id="data-nascimento">
+        </label>
+
+        <br>
+
+        <label for="text-description">
+            <textarea name="description" id="text-description" cols="25" rows="5"></textarea>
+        </label>
+
+        <br>
+
+        <label for="button-submit">
+            <button type="submit" id="button-submit" class="btn btn-primary">Enviar</button>
+        </label>
+        <label for="button-reset">
+            <button type="reset" id="button-reset" class="btn btn-success">Apagar</button>
+        </label>
+        
+    </form>
+    <script src="bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
