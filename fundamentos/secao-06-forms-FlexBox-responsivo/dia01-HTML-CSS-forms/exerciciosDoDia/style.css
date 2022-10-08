@@ -10,10 +10,12 @@ header {
     text-align: center;
 }
 
-main {
-    margin-top: 0px;
-    text-align: center;
-    margin-bottom: 10px;
+header img {
+    display: inline-block;
+}
+
+header h1 {
+    display: inline-block;
 }
 
 form {
@@ -46,15 +48,7 @@ textarea {
     resize: none;
 }
 
-.button {
-    background-color: rgba(2, 2, 211, 0.822);
-    padding: 6px;
-    border: 1px solid white;
-    border-radius: 8px;
-    margin-top: 5px;
-    box-shadow: 1px 1px 1px black;
+p.destino {
     display: inline-block;
-    position: relative;
-    left: 40%;
 }
 

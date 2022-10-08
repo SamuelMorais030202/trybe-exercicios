@@ -5,60 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concorrendo a uma viagem</title>
+    <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>TrybeTrip</h1>
+    <header class="card-header">
+        <img src="https://www.betrybe.com/static/images/logo-negative-green.svg" alt="">
+        <h1 class="display-5">TrybeTrip</h1>
         <p>Que tal fazer uma viagem por nossa conta ?</p>
     </header>
-    <main>
-        <h2>Preencha o formulário para concorrer!</h2>
+    <main class="container text-center">
+        <h2 class="display-6">Preencha o formulário para concorrer!</h2>
         <form action="" method="get" enctype="multipart/form-data">
-            <label for="name" class="label">
-                Nome completo:
-                <input type="text" id="name" autofocus autocomplete="off" placeholder="Digite seu nome..." minlength="10" maxlength="40" class="input">
-            </label>
-            <br>
-            <label for="e-mail" class="label">
-                E-mail:
-                <input type="email" name="input-email" id="e-mail" autocomplete="off" placeholder="Digite seu e-mail..." minlength="10" maxlength="50" class="input">
-            </label>
-            <br>
-            <label for="destino-cidade" class="label">
-                Qual o seu destino favorito ?
-                <input type="radio" name="destino" id="destino-cidade"> Cidade
-            </label>
-            <label for="destino-campo">
-                <input type="radio" name="destino" id="destino-campo"> Campo
-            </label>
-            <label for="destino-praia">
-                <input type="radio" name="destino" id="destino-praia"> Praia
-            </label>
-            <label for="destino-montanhas">
-                <input type="radio" name="destino" id="destino-montanhas"> Montanhas
-            </label>
-            <p> Porque você deveria ganhar a viagem ? <p></p>
-            <label for="text-area">
-                <textarea name="text-area" id="text-area" cols="30" rows="8" maxlength="500" minlength="50" placeholder="Digite o porque você deve ganhar..."></textarea>
-            </label>
+            <section class="form-floating mb-3">
+                <input type="text" id="name" autofocus autocomplete="off" placeholder="Digite seu nome..." minlength="10" maxlength="40" class="form-control">
+                <label for="floatingInput" class="label">
+                    Nome completo:
+                </label>
+            </section>
+            
+            <section class="form-floating mb-3">
+                <input type="email" name="input-email" id="e-mail" autocomplete="off" placeholder="name@example.com" minlength="10" maxlength="50" class="form-control">
+                <label for="floatingInput" class="label">
+                    E-mail:
+                </label>
+            </section>
+            
+            <section>
+                <p class="lead destino">Qual o seu destino favorito ?</p>
+                <label for="destino-cidade" class="col-form-label">
+                    <input type="radio" name="destino" id="destino-cidade" class="form-check-input mt-0"> Cidade
+                </label>
+                <label for="destino-campo">
+                    <input type="radio" name="destino" id="destino-campo" class="form-check-input mt-0"> Campo
+                </label>
+                <label for="destino-praia">
+                    <input type="radio" name="destino" id="destino-praia" class="form-check-input mt-0"> Praia
+                </label>
+                <label for="destino-montanhas">
+                    <input type="radio" name="destino" id="destino-montanhas" class="form-check-input mt-0"> Montanhas
+                </label>
+                <p class="lead"> Porque você deveria ganhar a viagem ?</p>
+                <label for="text-area">
+                    <textarea name="text-area" id="text-area" cols="30" rows="8" maxlength="500" minlength="50" placeholder="Digite o porque você deve ganhar..."></textarea>
+                </label>
+            </section>
             <br>
             <label for="date">
                 <input type="date" name="date-viagem" id="date">
             </label>
             <br>
-            <label for="outros">
-                <input type="checkbox" name="opcoes" id="outros"> 
+            <label for="outros" class="form-check-label">
+                <input type="checkbox" name="opcoes" id="outros" class="form-check-input"> 
                 Gostaria de receber outras ofertas da Trybe
             </label>
             <br>
-            <label for="direitos-imagem">
-                <input type="checkbox" name="imagem" id="direitos-imagem" required> 
+            <label for="direitos-imagem" class="form-check-label">
+                <input type="checkbox" name="imagem" id="direitos-imagem" required class="form-check-input"> 
                 Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
             </label>
             <br>
-            <button type="submit" class="button" id="submit">Enviar!</button>
-            <button type="reset" class="button">Apagar!</button>
+            <button type="submit" class="btn btn-success" id="submit">Enviar!</button>
+            <button type="reset" class="btn btn-danger">Apagar!</button>
         </form>
     </main>
     <script src="script.js"></script>
