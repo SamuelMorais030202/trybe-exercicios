@@ -8,15 +8,11 @@ SUBMIT_BUTTON.addEventListener('click', function(event) {
 
     if(NAME_INPUT.value.length < 10 || NAME_INPUT.value.length > 40) {
         alert('Dados Inválidos!');
-    }
-
-    if(EMAIL_INPUT.value.length < 10 || EMAIL_INPUT.value.length > 50) {
+    } else if(EMAIL_INPUT.value.length < 10 || EMAIL_INPUT.value.length > 50) {
         alert('Dados Inválidos!');
-    }
-
-    if(TEXT_FORM.value.length < 50 || TEXT_FORM.value.length > 500) {
+    } else if(TEXT_FORM.value.length < 50 || TEXT_FORM.value.length > 500) {
         alert('Dados Inválidos!')
     } else {
-        alert('Dados enviados com sucesso!')
+        alert('Seus dados foram enviados corretamente')
     }
 })
