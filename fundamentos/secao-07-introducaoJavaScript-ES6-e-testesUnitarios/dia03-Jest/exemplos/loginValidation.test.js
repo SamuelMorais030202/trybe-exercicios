@@ -3,7 +3,7 @@ const {
     greetingMessage,
     loginErrorMessage,
     verifyCredentials,
-  } = require("./loginValidation.js");
+  } = require("./oginValidation");
   
   describe("Testa a função verifyCredentials()", () => {
     
