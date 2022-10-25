@@ -1,0 +1,23 @@
+{
+  "name": "trybe-exercicios",
+  "version": "1.0.0",
+  "description": "Exercícios feitos na formação da trybe Meu repositório de exercícios da trybe. Criando repositório de exercícios",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamuelMorais030202/trybe-exercicios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamuelMorais030202/trybe-exercicios/issues"
+  },
+  "homepage": "https://github.com/SamuelMorais030202/trybe-exercicios#readme",
+  "dependencies": {
+    "jest": "^29.2.1"
+  }
+}
