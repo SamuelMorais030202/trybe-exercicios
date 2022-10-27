@@ -99,16 +99,7 @@ const books = [
 
   // Ordem decrescente dos livros por data de lançamento
   const booksOrderedByReleaseYearDesc = (books) => {
-    const newBooks = [];
-    books.forEach((book) => newBooks.push(book.releaseYear));
-    newBooks.sort((a, b) => b - a);
-    let bookList = [];
-    books.forEach((element, index) => {
-      if (element.releaseYear === newBooks[index]) {
-        bookList.push(element);
-      }
-    });
-    return bookList;
+    return books.sort((a, b) => b.releaseYear - a.releaseYear)
   }
 
   console.log(booksOrderedByReleaseYearDesc(books));
