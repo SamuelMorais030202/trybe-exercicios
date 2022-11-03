@@ -64,72 +64,58 @@ const books = [
   // Adicione o código do exercício aqui:
 
   // Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947
-  function authorBornIn1947(books) {
-    const author = books.find((book) => {
-      return book.author.birthYear === 1947;
-    });
-
-    return author.author.name;
-  }
-
-  // console.log(authorBornIn1947(books));
-
+  function authorBornIn1947() {
+    return books.find((book) => book.author.birthYear === 1947).author.name;
+  } 
+  // console.log(authorBornIn1947());
 
   // Retorne o nome do livro de menor nome.
-  function smallerName(books) {
+  function smallerName() {
     let nameBook = books[0].name;
     books.forEach((book) => {
       if (book.name.length < nameBook.length) {
         nameBook = book.name;
       }
-    });
+    })
     return nameBook;
   }
+  //console.log(smallerName());
 
-  // console.log(smallerName(books));
-
-
-  // Encontre o primeiro livro cujo nome possui 26 caracteres
-  const sizeName = (books) => {
+  // encontre o primeiro livro cujo nome possui 26 caracteres
+  function getNamedBook() {
     return books.find((book) => book.name.length === 26);
   }
+  // console.log(getNamedBook());
 
-  // console.log(sizeName(books));
-
-
-  // Ordem decrescente dos livros por data de lançamento
-  const booksOrderedByReleaseYearDesc = (books) => {
-    return books.sort((a, b) => b.releaseYear - a.releaseYear)
+  //Ordene os livros por data de lançamento em ordem decrescente
+  function booksOrderedByReleaseYearDesc(livros) {
+    return livros.sort((a, b) => b.releaseYear - a.releaseYear);
   }
+  //console.log(booksOrderedByReleaseYearDesc(books));
 
-  console.log(booksOrderedByReleaseYearDesc(books));
-
-
-  // Faça uma função que retorne true, se todas as pessoas autoras
-  // nasceram no século XX, ou false, caso contrário.
-  const everyoneWasBornOnSecXX = (books) => {
-    return books.every((book) => book.author.birthYear > 1901 && book.author.birthYear < 2000);
+  //retorne true se todos os autores nasceram no século XX
+  //caso contrário retorne false.
+  function everyoneWasBornOnSecXX() {
+    return books.every((book) => {
+      return book.author.birthYear >= 1901 && book.author.birthYear <= 2000
+    })
   }
-  // console.log(everyoneWasBornOnSecXX(books));
+  //console.log(everyoneWasBornOnSecXX())
 
-
-  // Faça uma função que retorne true, se algum livro foi lançado na década de 80, e false, caso contrário.
-  const someBookWasReleaseOnThe80s = (books) => {
-    return books.some((book) => book.releaseYear >= 1980 && book.releaseYear < 1990)
+  //retorne true se algum livro foi lançado na década de 80
+  //caso contrário retorne false.
+  function someBookWasReleaseOnThe80s() {
+    return books.some((book) => book
+      .releaseYear >= 1980 && book.releaseYear < 1990)
   }
-  // console.log(someBookWasReleaseOnThe80s(books));
+  //console.log(someBookWasReleaseOnThe80s());
 
-  
-  // Faça uma função que retorne true, caso nenhum author 
-  // tenha nascido no mesmo ano, e false, caso contrário.
-  const authorUnique = (books) => {
-    const authorsAges = [];
-    books.forEach((book) => authorsAges.push(book.author.birthYear));
-    for (let index in authorsAges) {
-      for (let index2 in authorsAges) {
-        if (authorsAges[index] === authorsAges[index2]) return false
-      }
-    }
-    return true
+  //Faça uma função que retorne true, caso nenhum author
+  //tenha nascido no mesmo ano, e false, caso contrário.
+  function authorUnique() {
+    return books.every((book) => 
+      books.some((someBook) => 
+        (book.author.birthYear === someBook.author.birthYear) &&
+        (book.author.name !== someBook.author.name)));
   }
-  // console.log(authorUnique(books));
+  console.log(authorUnique());

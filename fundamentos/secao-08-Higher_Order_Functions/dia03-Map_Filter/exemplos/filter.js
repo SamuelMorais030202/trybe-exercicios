@@ -21,16 +21,16 @@ const objPeople = [
     { name: 'Gilberto', age: 18 },
     { name: 'Vitor', age: 15 },
   ];
-
-const persons = objPeople.filter((pessoa) => pessoa.age >= 18);
-// console.log(persons);
+const verifyAgeDrive = (peoples) => {
+  return peoples.filter((pessoa) => pessoa.age > 18);
+}
+// console.log(verifyAgeDrive(objPeople));
 
 //-----------------------------------------------------------------------------
 
 const arrayMyStudents = ['Maria', 'Manuela', 'Jorge', 'Ricardo', 'Wilson'];
 
-const removeStudent = (student, listStudent) => {
-  return listStudent.filter((element) => element !== student);
+const removeStudent = (student, listStudents) => {
+  return listStudents.filter((studentInList) => studentInList !== student);
 }
-
-console.log(removeStudent('Maria', arrayMyStudents))
+//console.log(removeStudent('Maria', arrayMyStudents))
