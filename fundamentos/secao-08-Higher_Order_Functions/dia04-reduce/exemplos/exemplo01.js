@@ -11,22 +11,19 @@ const iteracoesDoReduce = numbers.reduce((acc, curr) => {
     // Iteração 4: valor do acc é 79 e o de curr é 3;
     // Valor final de `acc`é 82 e `curr` para no 3.
   return acc +  curr // Ao fim das iterações podemos ver que o `acc` armazenou o resultado total do retorno da função.
-});
-// console.log(`O resultado final é ${iteracoesDoReduce}`);
-  // por fim, esse console.log imprime o retorno final da nossa função.
+}, 0);
+ // console.log(`O resultado final é ${iteracoesDoReduce}`);
+ // por fim, esse console.log imprime o retorno final da nossa função.
 
 
 
 //----------------------------------------------------------------------
 const numbers2 = [1, 32, 44, 2, 3];
 
-const somNumber = numbers2.reduce((acc, curr) => {
-   // console.log(`O valor de  acc é: ${acc} o valor de curr é: ${curr}`);
-   return acc + curr;
-}, 30);
-// console.log(`A soma dos número é ${somNumber}`);
-
-
+const sum = (acc, curr) => {
+  return acc + curr;
+}
+// console.log(numbers2.reduce(sum, 30))
 
 //-----------------podemos usar o reduce em funções-------------------------
 
@@ -41,14 +38,9 @@ const soma = number3.reduce(somaNumber, 30);
 
 const numbers4 = [50, 85, -30, 3, 15];
 
-/*
-const bigNumberList = (acc, curr) => {
-  if (acc > curr) return acc;
-  if (acc < curr) return curr;
-}
-*/
-const bigNumberList = (acc, curr) => (acc > curr) ? acc : curr;
-const bigNumber = numbers4.reduce(bigNumberList);
+const bigNumber = numbers4.reduce((acc, curr) => 
+  (acc < curr) ? curr : acc);
+
 // console.log(bigNumber);
 
 
@@ -56,15 +48,14 @@ const bigNumber = numbers4.reduce(bigNumberList);
 
 const numbers5 = [18, 19, 23, 53, 4, 5, 76, 23, 54];
 
-const somaPar = numbers5.reduce((acc, curr) => {
-  // return (curr % 2 === 0) ? acc + curr : acc;
-  if (curr % 2 === 0) {
-    return acc + curr;
-  } else {
-    return acc;
-  }
-}, 0);
-// console.log(somaPar);
+const sumPar = numbers5.filter((number) => number 
+  % 2 === 0).reduce((acc, curr) => acc + curr);
+
+const sumImpar = numbers5.filter((number) => number % 2 !==
+  0).reduce((acc, curr) => acc + curr);
+
+// console.log(sumPar);
+// console.log(sumImpar);
 
 
 //-----------------------notas alunos------------------------------------
@@ -144,18 +135,11 @@ const estudantes = [
     },
   ];
 
-const notasAlunos = (alunos) => {
-  return alunos.map((aluno) => {
-    const not = aluno.materias.reduce((acc, curr) => {
-       return (acc.nota > curr.nota) ? acc : curr;
-    });
-    let obj = {
-      name: aluno.nome,
-      materia: not.name,
-    }
-    return obj;
-  })
-}
-
-console.log(notasAlunos(estudantes));
-
+const reportStudents = estudantes.map((estudante) => {
+  return {
+    name: estudante.nome,
+    nota: estudante.materias.reduce((acc, curr) => 
+      (acc.nota < curr.nota) ? curr : acc).name,
+  }
+});
+console.log(reportStudents);
