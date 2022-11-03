@@ -4,11 +4,8 @@ const grades = {
   ingles: 'Aprovado',
 };
   
-const verifyGrades = (studentGrades) => {
-   let listGrade = Object.values(studentGrades)
-   return listGrade.every((grade) => {
-     return grade === 'Aprovado'
-   });
+const verifyGrades = (studentsGrade) => {
+  return Object.values(studentsGrade).every((materia) => materia === 'Aprovado');
 }
-  
+
 console.log(verifyGrades(grades));

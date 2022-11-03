@@ -6,14 +6,10 @@ const people = [
   { name: 'Bruna', age: 19 },
 ];
   
-  // Adicione se código aqui
-  people.sort((a, b) => {
-    return a.age - b.age; // a e b serão objetos do array
-    // a comparação será através da key age
-  });
-  console.log('Crescente:');
-  console.log(people);
+// Adicione se código aqui
+people.sort((a, b) => a.age - b.age);
+console.log(people);
 
-  people.sort((a, b) => b.age - a.age);
-  console.log('Decresente:');
-  console.log(people);
+// Mudando a ordem para decrescente
+people.sort((a, b) => b.age - a.age);
+console.log(people);

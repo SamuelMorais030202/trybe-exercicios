@@ -7,9 +7,7 @@ const people = [
 ];
 
 const checkingAge = (minAge, persons) => {
-   return persons.every((person) => {
-      return person.age >= minAge;
-   });
+   return persons.every((person) => person.age >= minAge);
 }
 
 console.log(checkingAge(18, people));
