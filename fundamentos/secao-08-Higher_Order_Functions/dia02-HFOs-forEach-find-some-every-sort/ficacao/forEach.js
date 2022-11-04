@@ -6,7 +6,7 @@ const emailListInData = [
 ];
   
 const showEmailList = (email) => {
-  console.log(`O email ${email} esta cadastrado em nosso banco de dados!`);
-};
+  console.log(`O email ${email} está cadastrado no nosso banco de dados!`);
+}
 
-emailListInData.forEach(showEmailList)
+emailListInData.forEach(showEmailList);

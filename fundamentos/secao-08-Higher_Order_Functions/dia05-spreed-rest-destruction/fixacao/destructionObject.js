@@ -10,9 +10,10 @@ const jobInfos = {
   squadInitials: 'RLL',
 };
 
-const informationsPesowrd = {...user, ...jobInfos};
-const {name: nome, age, nationality, profession, squad, squadInitials} = informationsPesowrd;
-console.log(`Olá meu nome é ${nome} tenho ${age} sou ${nationality}
-trabalho como ${profession} na ${squad} no setor de ${squadInitials}`);
-console.log(informationsPesowrd);
+const {name: nome, age, nationality} = user;
+const {profession, squad, squadInitials} = jobInfos;
+
+console.log(`Hi, my name is ${nome}, I'm ${age} years old and I'm ${nationality}. 
+I work as a ${profession} and my squad is ${squadInitials}-
+${squad}`);
   

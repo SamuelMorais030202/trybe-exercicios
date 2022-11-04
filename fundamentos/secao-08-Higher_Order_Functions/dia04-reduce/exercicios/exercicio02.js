@@ -63,35 +63,32 @@ const books = [
 ];
   
 // Crie uma string com os nomes de todas as pessoas autoras.
-const reduceNames = (books) => {
-  const namesAuthor = books.map((book) => {
-    return book.author.name;
-  }).reduce((acc, curr) => {
-    return `${acc}, ${curr}`;
-  });
-  return namesAuthor;
+const reduceNames = () => {
+  return books.reduce((acc, curr) => {
+    return acc += `${curr.author.name}, `
+  }, '')
 }
-// console.log(reduceNames(books))
+// console.log(reduceNames());
+
 
 
 // Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
-const averageAge = (books) => {
-  const ageAuthor = books.map((age) => {
-    return age.releaseYear - age.author.birthYear;
-  }).reduce((acc, curr) => {
-    return acc  + curr;
-  })
-  return ageAuthor / books.length
+const averageAge = () => {
+  const ageAuthors = books.map((book) => book.releaseYear - book
+    .author.birthYear).reduce((acc, curr) => acc + curr);
+  return ageAuthors / books.length;
 }
-// console.log(averageAge(books));
+
+console.log(averageAge(books));
 
 
 // Encontre o livro com o maior nome.
-const longestNamedBook = (books) => {
-  return books.reduce((acc, curr) =>{
-    return (acc.name.length > curr.name.length) ? acc : curr;
+const longestNamedBook = () => {
+  return books.reduce((acc, curr) => {
+    return (acc.name.length < curr.name.length) ?
+      curr : acc;
   })
 }
-console.log(longestNamedBook(books));
+console.log(longestNamedBook());
 
 

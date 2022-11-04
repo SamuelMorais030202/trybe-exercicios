@@ -12,8 +12,8 @@ const character = {
     },
   };
 
-  const {name, age, homeWorld: {name: planetName}, description: {jedi}} = character;
+  const {name, age, description:{specieName}, homeWorld: {name:nome}} = character;
   console.log(name);
   console.log(age);
-  console.log(planetName);
-  console.log(jedi);
+  console.log(specieName);
+  console.log(nome);

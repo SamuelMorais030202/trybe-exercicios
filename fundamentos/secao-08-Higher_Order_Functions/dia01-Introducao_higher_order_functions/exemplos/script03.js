@@ -1,3 +1,4 @@
+/*
 const waking_up = () => 'Acordando!!';
 const coffeTime = () => 'Hora de tomar café!!';
 const toSleep = () => 'Partiu dormir!!'
@@ -12,3 +13,13 @@ const doingThings = (walking, coffe, sleep, hrs) => {
 }
 
 doingThings(waking_up(), coffeTime(), toSleep, hrs)
+*/
+
+const acordando = () => 'Acordando!!';
+const tomandoCafe = () => 'Bora tomar café';
+const dormir = () => 'Partiu dormir';
+
+const doingThings = (argument) => {
+  console.log(argument())
+}
+doingThings(acordando);

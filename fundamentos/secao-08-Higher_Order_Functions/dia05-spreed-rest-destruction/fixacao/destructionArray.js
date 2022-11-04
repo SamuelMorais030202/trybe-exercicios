@@ -1,24 +1,21 @@
 const saudacoes = ['Olá', (saudacao) => console.log(saudacao)];
 
-const [comprimento, funcao] = saudacoes;
-// funcao(comprimento);
+const [primeiraPosicao, segundaPosicao] = saudacoes;
+// segundaPosicao(primeiraPosicao);
 
-//-------------------------------------------------
-
+//------------------------------------------------------
 let comida = 'gato';
 let animal = 'água';
 let bebida = 'arroz';
 
-const newInformations = [comida, animal, bebida];
-const [newAnimal, newBebida, newComida] = newInformations
-//console.log(newAnimal);
-//console.log(newBebida);
-//console.log(newComida);
+const newArray = [comida, animal, bebida];
+// console.log(newArray)
+const [newAnimal, newBebida, newComida] = newArray;
+//console.log(newAnimal, newBebida, newComida);
 
-//-----------------------------------------------------
 
+//----------------------------------------------------------
 let numerosPares = [1, 3, 5, 6, 8, 10, 12];
-const [impar1, impar3, impar5, par6, par8, par10, par12] = numerosPares
-numerosPares = [par6, par8, par10, par12];
-
-console.log(numerosPares); // [6, 8, 10, 12];
+const [primeiro, segundo, terceiro, par, par2, par3, par4] = numerosPares;
+numerosPares = [par, par2, par3, par4];
+console.log(numerosPares);
