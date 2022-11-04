@@ -1,6 +1,6 @@
 const pasowrds = ['Samuel', 'Pedro', 'Lucas'];
-const [primeiraPesoa, segundaPesoa, terceiraPesoa] = pasowrds;
+const [primeiraPessoa, segundPessoa, terceiraPessoa] = pasowrds;
 
-console.log(primeiraPesoa);
-console.log(segundaPesoa);
-console.log(terceiraPesoa);
+console.log(primeiraPessoa);
+console.log(segundPessoa);
+console.log(terceiraPessoa);

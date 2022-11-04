@@ -3,7 +3,6 @@ const daysOfWeek = {
     weekend: ['Saturday', 'Sunday'],
   };
 
-  const {workDays, weekend} = daysOfWeek;
-
-  const newArray = [...workDays, ...weekend];
-  console.log(newArray);
+const {workDays, weekend} = daysOfWeek;
+const newList = [...workDays, ...weekend];
+console.log(newList);

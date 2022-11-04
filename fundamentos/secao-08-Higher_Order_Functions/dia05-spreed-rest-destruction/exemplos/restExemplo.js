@@ -9,7 +9,6 @@ function quantosParams(...args) {
   
   //------------------------------------------------------------------------------
 
-const sum = (...args) => args.reduce((accumulator, current) => accumulator + current, 0);
-const arr = [0, 3, 4];
-const arr2 = [1, 2, 5];
-console.log(sum(...arr, ...arr2)); // 15
+  const sum = (...argm) => argm.reduce((acc, curr) => acc + curr);
+  console.log(sum(1, 2, 4, 7));
+  console.log(sum(2, 9, 7, 10))

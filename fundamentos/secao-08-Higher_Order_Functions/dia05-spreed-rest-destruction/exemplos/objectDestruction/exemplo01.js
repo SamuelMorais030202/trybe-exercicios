@@ -4,9 +4,8 @@ const product = {
     seller: 'Casas de Minas',
   };
 
-  const {price, seller} = product;
-  console.log(price);
-  console.log(seller);
+  const {name, seller} = product;
+  console.log(`O nome do produto é ${name} e está na loja ${seller}`)
 
   const propagandaProduto = ({name, price, seller}) => {
     console.log(`Estamos vendendo ${name}, por ${price} reais na loja ${seller}`);
