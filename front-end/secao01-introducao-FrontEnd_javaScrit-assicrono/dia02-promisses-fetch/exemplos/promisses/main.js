@@ -5,11 +5,13 @@ const resolvedPromise = () =>
   new Promise((resolve, reject) => {
     setTimeout(()=> {
         const randonNumber = newNumberRandom();
-        console.log(randonNumber);
         resolve(randonNumber);
     }, 1000)
   });
-resolvedPromise();
+resolvedPromise()
+.then((response) => {
+  console.log(`O número gerado é ${response}`);
+})
 
 // promisse rejeitada
 const rejectPromise = () => 
@@ -19,4 +21,10 @@ const rejectPromise = () =>
         reject(new Error(`O número ${randomNumber} é inválido`))
     }, 1000)
   })
-// rejectPromise();
+rejectPromise()
+.then((response) => {
+  console.log(`rejected: O número gerado foi ${response}`);
+})
+.catch((error) => {
+  console.log(error);
+})
