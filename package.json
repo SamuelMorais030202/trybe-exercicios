@@ -192,7 +192,6 @@
     "yocto-queue": "^0.1.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -204,6 +203,4 @@
   "bugs": {
     "url": "https://github.com/SamuelMorais030202/trybe-exercicios/issues"
   },
-  "type": "module",
-  "homepage": "https://github.com/SamuelMorais030202/trybe-exercicios#readme"
 }
