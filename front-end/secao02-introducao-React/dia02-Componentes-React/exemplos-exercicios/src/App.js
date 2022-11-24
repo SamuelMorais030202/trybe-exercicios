@@ -2,6 +2,7 @@
 import React from 'react';
 import Album from './Album';
 import List from './ListShopping';
+import UsersList from './ListUsers';
 
 class App extends React.Component {
   render() {
@@ -44,6 +45,9 @@ class App extends React.Component {
         </section>
         <section>
           <List />
+        </section>
+        <section>
+          <UsersList />
         </section>
       </div>
     );
