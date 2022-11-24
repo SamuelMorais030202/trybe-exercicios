@@ -1,6 +1,6 @@
 import React from "react";
 
-//Componentes de função 
+// Componentes de função 
 const Greeting = (fullName) => {
     const { name, lastName} = fullName
     return (
@@ -20,5 +20,7 @@ console.log(Greeting('Samuel'))
 //         )
 //     }
 // }
+
+//
 
 export default Greeting;
