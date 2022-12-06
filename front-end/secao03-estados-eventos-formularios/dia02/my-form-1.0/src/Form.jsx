@@ -20,13 +20,32 @@ class Form extends React.Component {
       expectation: '',
       region: '',
       checked: false,
+      formularioComErros: '',
     }
 
     this.fileInput = React.createRef();
 
   }
 
-  // handleName(event) {
+  handleError() {
+    const { name, e_mail, expectation, region, checked } = this.state;
+
+    const errosCase = [
+      !name.length,
+      !e_mail.length,
+      !expectation.length,
+      !region.length,
+      !checked
+    ]
+
+    const errosForm = errosCase.every((error) => error !== true);
+
+    this.setState({
+      formularioComErros: !errosForm,
+    })
+  }
+
+  // handleName(event) { 
   //   this.setState({name: event.target.value});
   // }
 
@@ -45,11 +64,11 @@ class Form extends React.Component {
   //Handle genérico
   handleChage({ target }) {
     const { name } = target
-    const value = target.type === 'checkbox' ? target.checked : target.value
+    const value = target.type === 'checkbox' ? target.checked : target.value;
 
     this.setState({
       [name]: value,
-    })
+    }, this.handleError);
   }
 
   handleSubmit(event) {
