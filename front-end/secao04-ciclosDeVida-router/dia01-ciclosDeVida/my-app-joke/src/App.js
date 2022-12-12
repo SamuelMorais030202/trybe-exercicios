@@ -22,6 +22,7 @@ class App extends React.Component {
     this.fetchJoke();
   }
 
+  // Renderização
   render() {
     const { jokeObj } = this.state;
     console.log(jokeObj)
