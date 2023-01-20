@@ -11,6 +11,7 @@ describe('Testando moks', () => {
   function num () {
     return Math.floor(Math.random() * 100);
   }
+
   function soma () {
     return num() + num()
   }
