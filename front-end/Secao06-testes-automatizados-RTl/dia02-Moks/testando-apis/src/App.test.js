@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-afterEach(() => jest.clearAllMocks());
+// afterEach(() => jest.clearAllMocks());
 
 describe("Testando o componente App.", () => {
 
